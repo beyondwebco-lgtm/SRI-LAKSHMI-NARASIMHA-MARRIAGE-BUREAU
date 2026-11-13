@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-maroon: #800000;
+  --secondary-gold: #D4AF37;
+  --accent-green: #1B4D3E;
+  --bg-cream: #FCF8F2;
+  --text-brown: #331B15;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #FAF4EB;
+  color: #331B15;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #FAF4EB;
+}
+
+/* Headings font */
+h1, h2, h3, h4, .font-traditional {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+}
+
+.font-serif-body {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Traditional Gold Gradient */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F6E27A 0%, #CB9B2C 50%, #916E16 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.maroon-gradient {
+  background: linear-gradient(135deg, #5B0000 0%, #800000 60%, #480000 100%);
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #FFF1B0 0%, #D4AF37 50%, #A68019 100%);
+}
+
+.card-gold-border {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 4px 20px rgba(128, 0, 0, 0.06), 0 1px 3px rgba(212, 175, 55, 0.2);
+}
+
+.card-gold-border:hover {
+  border-color: rgba(212, 175, 55, 0.8);
+  box-shadow: 0 10px 30px rgba(128, 0, 0, 0.12), 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* Traditional Motif Pattern */
+.bg-mandala-pattern {
+  background-color: #FCF8F2;
+  background-image: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 1.5px, transparent 1.5px),
+                    radial-gradient(circle at 0% 0%, rgba(128, 0, 0, 0.04) 2px, transparent 2px);
+  background-size: 32px 32px;
+}
+
+.bg-maroon-pattern {
+  background-color: #6E0000;
+  background-image: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.15) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+}
+
+/* Traditional Border Dividers */
+.ornate-border-top {
+  position: relative;
+}
+.ornate-border-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #D4AF37, #800000, #D4AF37, transparent);
+}
+
+.ornate-border-bottom {
+  position: relative;
+}
+.ornate-border-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #D4AF37, #800000, #D4AF37, transparent);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FDF9F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #800000;
+  border-radius: 5px;
+  border: 2px solid #D4AF37;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #600000;
+}
+
+/* Soft Diya Pulse animation */
+@keyframes flame-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 6px #F3B737);
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+    filter: drop-shadow(0 0 12px #FFD700);
+  }
+}
+
+.diya-pulse {
+  animation: flame-pulse 2.5s ease-in-out infinite;
+}
+
