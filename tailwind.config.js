@@ -66,6 +66,9 @@ module.exports = {
           950: '#1D0D09',
         }
       },
+      screens: {
+        'xs': '420px',
+      },
       fontFamily: {
         serif: ['Cinzel', 'Playfair Display', 'Georgia', 'serif'],
         sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
